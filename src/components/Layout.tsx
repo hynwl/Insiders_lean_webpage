@@ -21,48 +21,11 @@ export const Layout = (): JSX.Element => {
         <div className="container mx-auto flex items-center justify-between">
           {/* Logo Section */}
           <div className="flex items-center gap-4 cursor-pointer shrink-0" onClick={() => navigate('/')}>
-            {/* 찬 아이콘 */}
-            <div className="flex items-center">
-              <div className="relative">
-                <img
-                  className="w-[41px] h-[41px]"
-                  alt="Blue circle icon"
-                  src="/---5.png"
-                />
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-bold text-[19px]">
-                  찬
-                </div>
-              </div>
-              <img
-                className="w-4 h-[3px]"
-                alt="Line"
-                src="/---50.svg"
-              />
-            </div>
 
             {/* 로고 텍스트 */}
             <div className="flex flex-col">
               <span className="font-bold text-[35px]">정.거.장</span>
               <span className="text-sm text-[#5c5c5c] font-bold">정치를 거론하는 장</span>
-            </div>
-
-            {/* 반 아이콘 */}
-            <div className="flex items-center">
-              <img
-                className="w-4 h-[3px]"
-                alt="Line"
-                src="/---49.svg"
-              />
-              <div className="relative">
-                <img
-                  className="w-[41px] h-[41px]"
-                  alt="Red circle icon"
-                  src="/---4.png"
-                />
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-bold text-[19px]">
-                  반
-                </div>
-              </div>
             </div>
           </div>
 
@@ -75,7 +38,7 @@ export const Layout = (): JSX.Element => {
                     className="flex items-center justify-center px-6 py-2 hover:bg-gray-50 rounded-lg transition-colors"
                     href={item.href}
                   >
-                    <span className={twMerge("font-normal text-[#707070] text-lg lg:text-2xl whitespace-nowrap", checkCurrentPath(pathname, item.href) && "text-[#141414]")}>
+                    <span className={twMerge("font-normal text-[#707070] text-lg lg:text-xl whitespace-nowrap", checkCurrentPath(pathname, item.href) && "text-[#141414]")}>
                       {item.label}
                     </span>
                   </NavigationMenuLink>
